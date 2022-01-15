@@ -105,3 +105,22 @@ class BeerControl extends React.Component {
       selectedBeer: null,
     });
   };
+
+  handleEditClick = () => {
+    console.log("handleEditClick reached!");
+    this.setState({ editing: true });
+  };
+
+  handleEditingBeerInList = (beerToEdit) => {
+    const editedMainBeerList = this.state.mainBeerList
+      .filter((beer) => beer.id !== this.state.selectedBeer.id)
+      .concat(beerToEdit);
+    this.setState({
+      mainBeerList: editedMainBeerList,
+      editing: false,
+      selectedMerch: null,
+    });
+  };
+}
+
+export default BeerControl;

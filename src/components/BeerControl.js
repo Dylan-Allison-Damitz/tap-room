@@ -118,7 +118,7 @@ class BeerControl extends React.Component {
     this.setState({
       mainBeerList: editedMainBeerList,
       editing: false,
-      selectedMerch: null,
+      selectedBeer: null,
     });
   };
 
@@ -134,7 +134,7 @@ class BeerControl extends React.Component {
         />
       );
       buttonText = "Return To Beer List";
-    } else if (this.state.selectedMerch != null) {
+    } else if (this.state.selectedBeer != null) {
       currentlyVisibleState = (
         <BeerDetail
           beer={this.state.selectedBeer}

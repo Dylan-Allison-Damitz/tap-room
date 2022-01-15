@@ -3,7 +3,7 @@ import beerImage from "./../img/beer.jpeg";
 function Header() {
   return (
     <React.Fragment>
-      <h1>Hyrule Castle Town Shop</h1>
+      <h1>Uncle Dyl's Speakeasy</h1>
       {/* eslint-disable-next-line */}
       <img src={beerImage}/>
     </React.Fragment>

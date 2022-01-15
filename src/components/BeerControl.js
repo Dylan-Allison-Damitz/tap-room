@@ -36,3 +36,30 @@ class BeerControl extends React.Component {
       formVisibleOnPage: false,
     });
   };
+
+  handleIncrementQuantity = (id) => {
+    if (this.state.mainBeerList.length > 1) {
+      const selectedBeer = this.state.mainBeerList.filter(
+        (beer) => beer.id === id
+      )[0];
+      if(selectedBeer.quantity > 0){
+      selectedBeer.quantity--;
+      const newMainBeerList = this.state.mainBeerList
+        .filter((beer) => beer.id !== id)
+        .concat(selectedBeer);
+      this.setState({
+        mainBeerList: newMainBeerList,
+      })};
+    } else {
+      const selectedBeer = this.state.mainBeerList.filter(
+        (beer) => beer.id === id
+      )[0];
+      if(selectedBeer.quantity > 0){
+      selectedBeer.quantity--;
+      const newBeerListArray = [];
+      const changedBeerArray = newBeerListArray.concat(selectedBeer);
+      this.setState({
+        mainBeerList: changedBeerArray,
+      })};
+    }
+  };

@@ -28,3 +28,11 @@ class BeerControl extends React.Component {
       }));
     }
   };
+
+  handleAddingNewBeerToList = (newBeer) => {
+    const newMainBeerList = this.state.mainBeerList.concat(newBeer);
+    this.setState({
+      mainBeerList: newMainBeerList,
+      formVisibleOnPage: false,
+    });
+  };

@@ -24,3 +24,9 @@ function EditBeerForm(props) {
     </React.Fragment>
   );
 }
+
+EditBeerForm.propTypes = {
+  beer: PropTypes.object,
+  onEditBeer: PropTypes.func,
+};
+export default EditBeerForm;

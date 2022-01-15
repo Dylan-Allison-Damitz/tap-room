@@ -14,4 +14,17 @@ class BeerControl extends React.Component {
       editing: false,
     };
   }
-}
+
+  handleClick = () => {
+    if (this.state.selectedBeer != null) {
+      this.setState({
+        formVisibleOnPage: false,
+        selectedBeer: null,
+        editing: false,
+      });
+    } else {
+      this.setState((prevState) => ({
+        formVisibleOnPage: !prevState.formVisibleOnPage,
+      }));
+    }
+  };

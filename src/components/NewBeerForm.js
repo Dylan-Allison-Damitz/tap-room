@@ -14,3 +14,18 @@ function NewBeerForm(props) {
       id: v4(),
     });
   }
+  return (
+    <React.Fragment>
+      <ReusableForm
+        formSubmissionHandler={handleNewBeerFormSubmission}
+        buttonText="Submit"
+      />
+    </React.Fragment>
+  );
+}
+
+NewBeerForm.propTypes = {
+  onNewBeerCreation: PropTypes.func,
+};
+
+export default NewBeerForm;

@@ -88,3 +88,10 @@ class BeerControl extends React.Component {
       });
     }
   }
+
+  handleChangingSelectedBeer = (id) => {
+    const selectedBeer = this.state.mainBeerList.filter(
+      (beer) => beer.id === id
+    )[0];
+    this.setState({ selectedBeer: selectedBeer });
+  };

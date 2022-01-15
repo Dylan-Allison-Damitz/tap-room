@@ -1,11 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-function Merch(props) {
-  // hard coded code right here baby^^
+function Beer(props) {
+
   return (
     <React.Fragment>
-      {/* Below we use arrow notation within the div to return the id of a clicked merch */}
-      <div onClick={() => props.whenMerchClicked(props.id)}>
+      <div onClick={() => props.whenBeerClicked(props.id)}>
         <h3>
           {props.description} - {props.name}
         </h3>
@@ -21,3 +20,13 @@ function Merch(props) {
     </React.Fragment>
   );
 }
+
+Beer.propTypes = {
+  name: PropTypes.string,
+  description: PropTypes.string,
+  quantity: PropTypes.number,
+  abv: PropTypes.number,
+  id: PropTypes.string,
+  whenBeerClicked: PropTypes.func,
+};
+export default Beer;

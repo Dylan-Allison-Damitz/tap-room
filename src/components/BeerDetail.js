@@ -19,3 +19,12 @@ function BeerDetail(props) {
     </React.Fragment>
   );
 }
+
+BeerDetail.propTypes = {
+  beer: PropTypes.object,
+  onClickingDelete: PropTypes.func,
+  onClickingEdit: PropTypes.func,
+  onClickingBuy: PropTypes.func,
+  onClickingRestock: PropTypes.func,
+};
+export default BeerDetail;

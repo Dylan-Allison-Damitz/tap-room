@@ -95,3 +95,13 @@ class BeerControl extends React.Component {
     )[0];
     this.setState({ selectedBeer: selectedBeer });
   };
+
+  handleDeletingBeer = (id) => {
+    const newMainBeerList = this.state.mainBeerList.filter(
+      (beer) => beer.id !== id
+    );
+    this.setState({
+      mainBeerList: newMainBeerList,
+      selectedBeer: null,
+    });
+  };

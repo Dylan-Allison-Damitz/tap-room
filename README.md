@@ -2,8 +2,6 @@
 
 #### By _Dylan Allison-Damitz_
 
-***
-
 ## Description
 
 Welcome to Uncle Dyl's Speakeasy! Come and stay awhile! This is a simple React application allowing users to create, read, update, and delete new keg types within the Speakeasy application. Users can restock kegs as they come in using the increment functionality, or decrease the keg supply as they are sold. A user can see, in real time, the amount of keg availability for each brew type. Prost! 
